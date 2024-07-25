@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0a0a0a;
+}
+
+.game-frame {
+    position: relative;
+    width: 90vw;
+    height: 90vh;
+    border: 5px solid #fff;
+    overflow: hidden;
+    background-color: #333;
+    background-image: url(Background/bluemoon.png);
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.end {
+    display: none;
+    text-align: center;
+}
+
+.balloon {
+    position: absolute;
+    bottom: -100px;
+    animation: rise 5s linear infinite;
+    transition: transform 0.3s, opacity 0.3s;
+    width: 150px;
+}
+
+@keyframes rise {
+    from {
+        bottom:-100px;
+    }
+    to {
+        bottom: 90vh;
+    }
+}
+
+.p{
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    
+}
+
+#missed {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 20px;
+}
+
+#scoreboard {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    color: rgb(0, 0, 0);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Optional: Add specific styles for each balloon */
+.blue { left: 10%; }
+.green { left: 25%; }
+.orange { left: 40%; }
+.pink { left: 55%; }
+.purple { left: 70%; }
+.red { left: 85%; }
+.yellow { left: 50%; }
+
